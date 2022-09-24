@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "nombre": "John Wick",
+      "telefono": "5569312226",
+      "edad": "452",
+      "id": 2
+    }
+  ],
+  "computers": [
+    {
+      "Marca": "LENOVO",
+      "Modelo": "IDEAPAD",
+      "Capacidad": 200,
+      "Ram": 16,
+      "Procesador": "AMD",
+      "id": 8
+    },
+    {
+      "Marca": "HP",
+      "Modelo": "WORKSTATION",
+      "Capacidad": 40000,
+      "Ram": 32,
+      "Procesador": "XEON",
+      "id": 9
+    }
+  ]
+}

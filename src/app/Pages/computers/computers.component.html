@@ -1,0 +1,48 @@
+<p>computers works!</p>
+<button routerLink="/computers/computer">Nuevo Computer</button>
+<div class="container">
+  <table mat-table [dataSource]="data" class="mat-elevation-z8">
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>ID</th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Marca">
+      <th mat-header-cell *matHeaderCellDef>Marca</th>
+      <td mat-cell *matCellDef="let element"> {{element.Marca}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Modelo">
+      <th mat-header-cell *matHeaderCellDef>Modelo</th>
+      <td mat-cell *matCellDef="let element"> {{element.Modelo}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Capacidad">
+      <th mat-header-cell *matHeaderCellDef>Capacidad</th>
+      <td mat-cell *matCellDef="let element"> {{element.Capacidad}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Ram">
+      <th mat-header-cell *matHeaderCellDef>Ram</th>
+      <td mat-cell *matCellDef="let element"> {{element.Ram}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Procesador">
+      <th mat-header-cell *matHeaderCellDef>Procesador</th>
+      <td mat-cell *matCellDef="let element"> {{element.Procesador}} </td>
+    </ng-container>
+    <ng-container matColumnDef="editar">
+      <th mat-header-cell *matHeaderCellDef>Editar</th>
+      <td mat-cell *matCellDef="let element">
+        <button [routerLink]="'/computers/computer/'+ element.id" color="accent" mat-icon-button>
+          editar
+        </button>
+      </td>
+    </ng-container>
+    <ng-container matColumnDef="eliminar">
+      <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+      <td mat-cell *matCellDef="let element">
+        <button [routerLink]="'/computers/eliminar/'+ element.id" color="accent" mat-icon-button>
+          eliminar
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+<p>computer works!</p>
+<div class="container" *ngIf="formComputer" [formGroup]="formComputer">
+  <h1>Agregar Computer</h1>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Marca</mat-label>
+      <input matInput placeholder="Marca" value="Marca" formControlName="Marca">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Modelo</mat-label>
+      <input matInput placeholder="Modelo" value="Modelo" formControlName="Modelo">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Capacidad</mat-label>
+      <input matInput placeholder="Capacidad" type="number" formControlName="Capacidad">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Ram</mat-label>
+      <input matInput placeholder="Ram" type="number" formControlName="Ram">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Procesador</mat-label>
+      <input matInput placeholder="Procesador" value="Procesador" formControlName="Procesador">
+    </mat-form-field>
+    <button mat-button class="example-full-width" color="primary" [disabled]="formComputer.invalid" (click)="saveComputer()">Agregar</button>
+  </form>
+</div>

@@ -1,0 +1,21 @@
+<div class="container" *ngIf="formuser" [formGroup]="formuser">
+  <h1>Crear Usuario</h1>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput placeholder="Nombre"  formControlName="nombre">
+    </mat-form-field>
+    <hr/>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Telefono</mat-label>
+      <input matInput placeholder="Telefono" formControlName="telefono" >
+    </mat-form-field>
+    <hr/>
+    <mat-form-field class="example-full-width"  appearance="fill">
+      <mat-label>Edad</mat-label>
+      <input matInput placeholder="Edad" formControlName="edad">
+    </mat-form-field>
+    <hr/>
+    <button mat-button class="example-full-width" color="primary" (click)="save()" [disabled]="formuser.invalid">Primary</button>
+  </form>
+</div>
